@@ -1,0 +1,14 @@
+Variable and Data Types (Theory of Variable and Data Types need to be written in a journal from GCR with the tables. Theory can be written shorter, that's fine.) a.Performing Arithmetic Operations using Variables- (+, -, *, /, %- Try taking values from user) SOURCE CODE-
+
+using System;
+  public class DataVariableExample
+{
+    public static void Main(string[] args)
+   {
+       int x = 5;
+       int y = 6;
+       int sum = x + y;
+       Console.WriteLine(sum); // Print the sum of x + y
+       Console.ReadLine();
+    }
+}
