@@ -1,0 +1,134 @@
+Conditional Logic-(One Line Theory from GCR.) If statement: (Try taking values from the user.) SOURCE CODE-
+
+using System;
+  public class EvenOddExample
+  {
+       public static void Main(string[] args)
+   {
+       int a= 9;
+       if(a%2 == 0)
+       {
+       Console.WriteLine ("It is an Even no.");
+        }
+    }
+}
+If- Else statement: (Try taking values from the user.) SOURCE CODE-
+
+using System;
+//IF and IF Else Loop Program
+public class EvenOddExample
+{
+ public static void Main(string[] args)
+ {
+     int a= 9;
+     if(a%2 == 0)
+     {
+         Console.WriteLine ("It is an Even no.");
+     }
+     else
+     {
+         Console.WriteLine("It is an Odd no.");
+     }
+
+    }
+}
+If- Else If- Else statement- SOURCE CODE-
+
+// This program finds whether the given number is positive, negative or zero.
+public class IfElseIfElse
+{
+    static void Main(string[] args)
+    {
+        int num;
+
+        Console.WriteLine("Enter any number: ");
+        num = Convert.ToInt32(Console.ReadLine());        
+
+        if (num > 0)
+        {            
+            Console.WriteLine("Enter number is positive ");
+        }
+        else if (num < 0)
+        {
+            Console.WriteLine("Enter number is negative ");            
+        }
+        else
+        {
+            Console.WriteLine("Enter number is zero ");            
+        }     
+         Console.ReadLine();
+    }
+}
+Switch Statement: (You can do the same program for Days or Months. Try taking values from users.) SOURCE CODE-
+
+using System;
+public class marksofStudents
+{
+    public static void Main(string[] args)
+    {
+        int marks=  80;
+        switch(marks)
+        {
+            case 30:
+            Console.WriteLine ("Fail");
+            break;
+            case 40:
+            Console.WriteLine ("Average");
+            break;
+            case 50:
+            case 60:
+            Console.WriteLine ("Good");
+            break;
+            case 70:
+            Console.WriteLine ("Very Good");
+            break;
+            case 80:
+            Console.WriteLine ("Excellent");
+            break;
+            case 90:
+            Console.WriteLine ("Outstanding");
+            break;
+            default:
+            Console.WriteLine ("Invalid Marks.");
+            break;
+        }
+        Console.WriteLine ("Your marks is {0} out of 100.", marks);
+        Console.ReadLine();
+    }
+}
+Loops (Theory written during lecture. You can write in short) For Loop SOURCE CODE-
+
+using System;
+public class ForLoopExample
+{
+    public static void Main(string[] args)
+    {
+        //using for loop  
+    for(int i=1;i<=10;i++){  
+        if(i==5){  
+            //breaking the loop  
+            break;  
+        }  
+        Console.WriteLine(i);  
+    }  
+}  
+}  
+While Loop SOURCE CODE-
+
+using System;
+public class WhileLoopExample
+{
+    public static void Main(string[] args)
+    {
+        int num, fact= 1;
+        Console.WriteLine ("Enter the number: ");
+        num= int.Parse(Console.ReadLine());
+        while(num > 0){
+        fact= fact*num;
+        num--;
+            }
+            Console.WriteLine("\n factorial of given number is: "+fact);
+            Console.ReadLine();
+        }
+
+    }    
