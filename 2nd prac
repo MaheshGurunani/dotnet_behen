@@ -1,0 +1,194 @@
+Program to demonstrate how to define the and how to access members of class.
+SOURCE CODE-
+
+using System;
+
+public class Student
+
+{
+
+    int roll_no;..
+
+    string student_name;
+
+    public static void Main(string[] args)
+
+    {
+
+        Student std= new Student();
+
+        std.roll_no = 101;
+
+        std.student_name = "Siddhi";
+
+        Console.WriteLine (std.roll_no);
+
+        Console.WriteLine (std.student_name);
+
+    }
+
+}
+Program to demonstrate the class where we are having the main() method in another.
+SOURCE CODE:
+
+using System;
+
+public class Student
+
+{
+
+   public int roll_no;
+
+   public string student_name;
+
+}
+
+class TestStudent
+
+{
+
+    public static void Main(string[] args)
+
+    {
+
+        Student std= new Student();
+
+        std.roll_no = 101;
+
+        std.student_name = "Siddhi";
+
+        Console.WriteLine (std.roll_no);
+
+        Console.WriteLine (std.student_name);
+
+    }
+
+}
+Inheritance:
+
+SOURCE CODE:
+
+using System;
+
+namespace InheritanceApplication
+
+{
+
+class Shape
+
+{
+
+    public void setWidth(int w)
+
+    {
+
+        width = w;
+
+    }
+
+    public void setHeight(int h)
+
+    {
+
+        height = h;
+
+    }
+
+    protected int width;
+
+    protected int height;
+
+}
+
+// Derived class
+
+class Rectangle: Shape
+
+{
+
+    public int getArea()
+
+    {
+
+        return (width * height);
+
+    }
+
+}
+
+class RectangleTester
+
+{
+
+    static void Main(string[] args)
+
+    {
+
+        Rectangle Rect = new Rectangle();
+
+        Rect.setWidth(5);
+
+        Rect.setHeight(7);
+
+        // Print the area of the object.
+
+        Console.WriteLine("Total area: {0}",  Rect.getArea());
+
+        Console.ReadKey();
+
+    }
+
+}
+
+}
+Namespace:
+
+SOURCE CODE:
+
+using System;  
+
+namespace First {  
+
+public class Hello  
+
+{  
+
+    public void sayHello() { Console.WriteLine("Hello First Namespace"); }  
+
+}  
+
+}  
+
+namespace Second  
+
+{  
+
+    public class Hello  
+
+    {  
+
+        public void sayHello() { Console.WriteLine("Hello Second Namespace"); }  
+
+    }  
+
+}  
+
+public class TestNamespace  
+
+{  
+
+    public static void Main()  
+
+    {  
+
+        First.Hello h1 = new First.Hello();  
+
+        Second.Hello h2 = new Second.Hello();  
+
+        h1.sayHello();  
+
+        h2.sayHello();  
+
+    }  
+
+}
