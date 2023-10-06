@@ -1,0 +1,54 @@
+Server Control: Form has different controls. Once a user clicks on button control, user inserted data must be displayed on the screen.
+ <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="WebApplication13.WebForm1" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id= "displayrow" runat="server" class= "style2">
+
+        <asp:Label ID="Label1" runat="server" Text="name:"></asp:Label>
+        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox></br>
+    <asp:Label ID="Label2" runat="server" Text="address:"></asp:Label>
+    <asp:TextBox ID="TextBox2" runat="server" ontextchanged="TextBox2_TextChanged"></asp:TextBox></br>
+        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Width="107px" Text="submit" />
+    </div>
+
+    </form>
+</body>
+</html>
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+namespace WebApplication13
+{
+    public partial class WebForm1 : System.Web.UI.Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void TextBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            string str1 = "";
+            str1 += TextBox1.Text + "<br/>";
+            str1 += TextBox2.Text + "<br/>";
+            displayrow.InnerHtml = str1;
+        } 
+
+    }
+}
