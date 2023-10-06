@@ -1,0 +1,41 @@
+To design ASP.NET pages with a Menu Navigation Control, you can follow these steps to create a simple web application with a navigation menu using Visual Studio and C#. In this example, we'll use the ASP.NET Menu control for navigation.
+
+Here's how you can create ASP.NET pages with a Menu Navigation Control:
+
+1. **Create a New ASP.NET Web Application**:
+   - Open Visual Studio.
+   - Click on "File" > "New" > "Project..."
+   - Select "ASP.NET Web Application" and give it a name (e.g., "MenuNavigationDemo").
+   - Click "Create."
+
+2. **Design the Web Pages**:
+   - In Solution Explorer, right-click on the "MenuNavigationDemo" project and select "Add" > "Web Form."
+   - Name it "Default.aspx" and click "Add."
+
+3. **Add a Menu Control**:
+   - Open the "Default.aspx" file.
+   - Add the following code within the `<asp:Content>` element:
+
+```html
+<asp:Menu ID="menuNavigation" runat="server" Orientation="Horizontal">
+    <Items>
+        <asp:MenuItem Text="Home" NavigateUrl="~/Default.aspx" />
+        <asp:MenuItem Text="Products">
+            <asp:MenuItem Text="Product 1" NavigateUrl="~/Product1.aspx" />
+            <asp:MenuItem Text="Product 2" NavigateUrl="~/Product2.aspx" />
+        </asp:MenuItem>
+        <asp:MenuItem Text="About" NavigateUrl="~/About.aspx" />
+        <asp:MenuItem Text="Contact" NavigateUrl="~/Contact.aspx" />
+    </Items>
+</asp:Menu>
+```
+
+4. **Create Additional Web Pages**:
+   - Right-click on the "MenuNavigationDemo" project, select "Add" > "Web Form," and create the following pages: "Product1.aspx," "Product2.aspx," "About.aspx," and "Contact.aspx."
+
+5. **Run the Application**:
+   - Press F5 or click "Debug" > "Start Debugging" to run the application.
+
+You will see a horizontal menu at the top of each page with navigation links for "Home," "Products" (with sub-items "Product 1" and "Product 2"), "About," and "Contact." Clicking on these menu items will navigate to the respective pages.
+
+This example demonstrates how to create a basic navigation menu using the ASP.NET Menu control. You can further customize the menu's appearance and behavior by adjusting properties and styles to match your specific requirements. Additionally, you can use code-behind to handle menu item selection events for more advanced functionality if needed.
