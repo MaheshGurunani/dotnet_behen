@@ -1,0 +1,41 @@
+Web Control and demonstrate the use of AutoPostBack. Autopostback.aspx:
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Autopostback.aspx.cs" Inherits="AutoPost.Autopostback" %> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+<head runat="server"> 
+<title></title> 
+</head> 
+<body> 
+<form id="form1" runat="server"> 
+<p><b><mark>Web Controls and demonstrating AutoPostBack</mark></b></p> 
+<asp:DropDownList ID="ddlFruits" runat="server" AutoPostBack="true" OnSelectedIndexChanged="OnSelectedIndexChanged"> 
+<asp:ListItem Text="Mango" Value="1" /> 
+<asp:ListItem Text="Apple" Value="2" /> 
+<asp:ListItem Text="Banana" Value="3" /> 
+<asp:ListItem Text="Guava" Value="4" /> 
+<asp:ListItem Text="Orange" Value="5" /> 
+</asp:DropDownList> 
+</form> 
+</body> 
+</html> 
+Autopostback.aspx.cs:
+
+using System; 
+using System.Collections.Generic; 
+using System.Linq; 
+using System.Web; 
+using System.Web.UI; 
+using System.Web.UI.WebControls; 
+namespace AutoPost 
+{ 
+public partial class Autopostback : System.Web.UI.Page 
+{ 
+protected void Page_Load(object sender, EventArgs e) 
+{ 
+} 
+protected void OnSelectedIndexChanged(object sender, EventArgs e) 
+{ 
+string message = ddlFruits.SelectedItem.Text + " - " + ddlFruits.SelectedItem.Value;
+ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('" + message + "');", true); } 
+} 
+} 
